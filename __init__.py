@@ -33,7 +33,7 @@ class SpellingSkill(MycroftSkill):
 
         self.enclosure.deactivate_mouth_events()
         self.speak(spelled_word)
-        self.enclosure.bus.emit(Message("metadata", {"type": "skill-spelling", "text": spelled_word}))
+        self.enclosure.bus.emit(Message("metadata", {"type": "mycroft-spelling", "text": spelled_word}))
         # Pause mouth shapes appearing on screen for at least enough time
         # for the word to scroll by on the Mark 1 screen.  Pad with blanks
         # to prevent re-starting the scroll action if the timing is slightly
